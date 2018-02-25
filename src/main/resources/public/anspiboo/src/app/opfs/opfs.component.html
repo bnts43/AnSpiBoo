@@ -1,0 +1,25 @@
+<h2>My OPFs</h2>
+<div>
+  <label>New OPF name:
+    <input #opfName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(opfName.value); opfName.value=''">
+    add
+  </button>
+</div>
+<ul class="opfs">
+  <li *ngFor="let opf of opfs">
+    <a routerLink="/opf/{{opf.id}}">
+      <span class="badge">{{opf.id}}</span>
+      {{opf.name}}
+    </a>
+    <!-- TODO : déplacer la suppression dans la vue spécifique de l'OPF
+    plutôt que directement dans cette vue (trop dangereux)
+    <button class="delete" title="delete OPF"
+            (click)="delete(opf)">x</button>//-->
+    <a routerLink="/opf/parameter/{{opf.id}}" class="">
+      <span class="parameter">edit parameter</span>
+    </a>
+  </li>
+</ul>

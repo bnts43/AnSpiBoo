@@ -1,0 +1,23 @@
+<button (click)="goBack()">go back</button>
+
+<div *ngIf="opfParameter" class="opfParameter">
+  <!-- TODO replace with OPF name with appropriate query (to be found) -->
+  <h2>{{ opfParameter.opfId | uppercase }} OPF id Details</h2>
+  <!-- TODO : deactivate input fields for non authorized users -->
+  <ul>
+    <li><span>Average production days per week: </span>
+      <input [(ngModel)]="opfParameter.average_PROD_DAY" placeholder="average_PROD_DAY" /></li>
+    <li><span>Inventory solution: </span>
+      <input [(ngModel)]="opfParameter.inv_SOL" placeholder="inv_SOL" /></li>
+    <li><span>First day of the week: </span>
+      <input [(ngModel)]="opfParameter.week_1st_DAY" placeholder="week_1st_DAY" /></li>
+    <li><span>Number of PDP days in prebuilt fabrication mode: </span>
+      <input [(ngModel)]="opfParameter.fab_PB_DAYS" placeholder="fab_PB_DAYS" /></li>
+    <li><span>Number of days without production in campaign fabrication mode: </span>
+      <input [(ngModel)]="opfParameter.fab_C_DAYS" placeholder="fab_C_DAYS" /></li>
+    <li><span>TAFF usage: </span>
+      <input [(ngModel)]="opfParameter.taff" placeholder="taff" /></li>
+  </ul>
+
+</div>
+<button (click)="save()">save</button>

@@ -1,0 +1,14 @@
+.opfParameter ul li {
+  background: silver;
+  display: block;
+  border-radius: 4px;
+  padding: 0.5em;
+  margin: 0.5em;
+  min-width: 20em;
+  width: 75%;
+}
+.opfParameter span {
+  margin-right: 2em;
+  font-weight: bold;
+}
+

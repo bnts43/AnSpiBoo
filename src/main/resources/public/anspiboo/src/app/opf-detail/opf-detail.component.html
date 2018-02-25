@@ -1,0 +1,16 @@
+<button (click)="goBack()">go back</button>
+
+<div *ngIf="opf">
+  <h2>{{ opf.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{ opf.id }}</div>
+  <div><span>name: </span>{{ opf.name }}</div>
+
+  <div>
+    <label>name:
+      <!-- // TODO : limit edit to admin user // -->
+      <input [(ngModel)]="opf.name" placeholder="name" />
+    </label>
+  </div>
+</div>
+<button (click)="save()">save</button>
+

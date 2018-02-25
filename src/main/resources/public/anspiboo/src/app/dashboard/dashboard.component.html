@@ -1,0 +1,8 @@
+<h3>My OPFs</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let opf of opfs" class="col-1-4" routerLink="/opf/{{opf.id}}">
+    <div class="module opf">
+      <h4>{{opf.name}}</h4>
+    </div>
+  </a>
+</div>

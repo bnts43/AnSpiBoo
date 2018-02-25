@@ -1,0 +1,10 @@
+<h1>{{title | uppercase }}</h1>
+<!-- // navigation menu // -->
+<nav>
+  <a href="./">Home</a>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/my-opfs">My OPF's</a>
+</nav>
+<!-- // router outlet routes specific urls from app-routing module // -->
+<router-outlet></router-outlet>
+<app-messages></app-messages>
