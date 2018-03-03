@@ -1,0 +1,9 @@
+/exportSQLLibreOffice.PNG
+/temp_initiate.sql
+/sgd_temp.backup
+/target
+/.idea
+/src/main/resources/public/templates
+/src/main/resources/public/index.html
+
+*.iml
